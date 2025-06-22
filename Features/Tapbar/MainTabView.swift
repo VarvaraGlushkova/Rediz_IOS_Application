@@ -10,7 +10,7 @@ import SwiftUI
 struct MainTabView: View {
     var body: some View {
         TabView {
-            PosterFeedView() // You can replace this with a real screen
+            MixedFeedView()
                 .tabItem {
                     Image(systemName: "house")
                     Text("ГЛАВНАЯ")
@@ -28,7 +28,7 @@ struct MainTabView: View {
                     Text("ТЕМЫ")
                 }
 
-            Text("Блог")
+            BlogView()
                 .tabItem {
                     Image(systemName: "doc.text")
                     Text("БЛОГ")

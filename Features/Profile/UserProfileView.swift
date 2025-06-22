@@ -20,6 +20,17 @@ struct UserProfileView: View {
 
     @State private var selectedTab = "ТАСКИ"
     let tabs = ["РЕДИЗКИ", "ТАСКИ"]
+    
+    let profilePosts: [Post] = [
+        Post(imageName: "poster1", title: "POSTER DESIGN", username: "@rootahh", category: "POSTERS"),
+        Post(imageName: "poster2", title: "BRUTALIST", username: "@rootahh", category: "POSTERS")
+    ]
+
+    let profileTasks: [Task] = [
+        Task(imageName1: "font1", imageName2: "font2", title: "TYPE REWORK", username: "@rootahh", category: "FONTS"),
+        Task(imageName1: "poster3", imageName2: "poster4", title: "COMPARISON", username: "@rootahh", category: "POSTERS")
+    ]
+
 
     var body: some View {
         VStack(spacing: 0) {
@@ -90,48 +101,46 @@ struct UserProfileView: View {
                                 .background(selectedTab == tab ? Color(#colorLiteral(red: 0.831, green: 0.929, blue: 0.243, alpha: 1)) : .clear)
                                 .cornerRadius(4)
                                 .onTapGesture {
-                                    selectedTab = tab
+                                    withAnimation(.easeInOut(duration: 0.3)) {
+                                        selectedTab = tab
+                                    }
                                 }
+
                         }
                     }
                     .padding(.horizontal)
 
                     // Feed (placeholder)
+                    ZStack {
+                        if selectedTab == "РЕДИЗКИ" {
+                            VStack(spacing: 30) {
+                                ForEach(profilePosts) { post in
+                                    PostCardView(post: post)
+                                }
+                            }
+                            .transition(.opacity.combined(with: .move(edge: .leading)))
+                        }
 
-                        PostCardView(post: Post(
-                            imageName: "poster1",
-                            title: "POSTER DESIGN",
-                            username: "@rootahh",
-                            category: "POSTERS"
-                        ))
+                        if selectedTab == "ТАСКИ" {
+                            VStack(spacing: 30) {
+                                ForEach(profileTasks) { task in
+                                    TaskCardView(task: task)
+                                }
+                            }
+                            .transition(.opacity.combined(with: .move(edge: .trailing)))
+                        }
+                    }
+                    .animation(.easeInOut(duration: 0.3), value: selectedTab)
 
-                        PostCardView(post: Post(
-                            imageName: "poster2",
-                            title: "POSTER DESIGN",
-                            username: "@rootahh",
-                            category: "POSTERS"
-                        ))
                     }
                 }
                 .padding(.top)
             }
 
-            Divider()
-
-            // Tab bar
-//            HStack {
-//                TabBarItem(icon: "house", title: "ГЛАВНАЯ")
-//                TabBarItem(icon: "square.grid.2x2", title: "ЛЕНТА")
-//                TabBarItem(icon: "number", title: "ТЕМЫ")
-//                TabBarItem(icon: "doc.text", title: "БЛОГ")
-//                TabBarItem(icon: "person", title: "ПРОФИЛЬ", isSelected: true)
-//            }
-            .padding(.vertical, 10)
-            .background(.ultraThinMaterial)
+//            Divider()
+//            .padding(.vertical, 10)
+//            .background(.ultraThinMaterial)
         }
     }
 
 
-#Preview {
-    UserProfileView()
-}

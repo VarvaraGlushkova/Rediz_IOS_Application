@@ -14,11 +14,17 @@ class MixedFeedViewModel: ObservableObject {
     private let posts: [Post] = [
         Post(imageName: "poster1", title: "POSTER DESIGN", username: "@rootahh", category: "POSTERS"),
         Post(imageName: "font1", title: "WEB FONT", username: "@max_kio", category: "FONTS"),
+        Post(imageName: "font1", title: "WEB FONT", username: "@max_kio", category: "FONTS"),
+        Post(imageName: "font1", title: "WEB FONT", username: "@max_kio", category: "FONTS"),
+        Post(imageName: "font1", title: "WEB FONT", username: "@max_kio", category: "FONTS")
     ]
 
     private let tasks: [Task] = [
         Task(imageName1: "poster1", imageName2: "poster2", title: "Poster Comparison", username: "@seven", category: "POSTERS"),
-        Task(imageName1: "font2", imageName2: "font1", title: "Typography Battle", username: "@inkbyte", category: "FONTS")
+        Task(imageName1: "font2", imageName2: "font1", title: "Typography Battle", username: "@inkbyte", category: "FONTS"),
+        Task(imageName1: "poster1", imageName2: "poster2", title: "Poster Comparison", username: "@seven", category: "POSTERS"),
+        Task(imageName1: "poster1", imageName2: "poster2", title: "Poster Comparison", username: "@seven", category: "POSTERS"),
+        Task(imageName1: "poster1", imageName2: "poster2", title: "Poster Comparison", username: "@seven", category: "POSTERS")
     ]
 
     var filteredItems: [FeedItem] {
