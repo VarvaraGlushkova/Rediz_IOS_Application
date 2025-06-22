@@ -31,7 +31,7 @@ class PosterFeedViewModel: ObservableObject {
         Post(imageName: "poster2", title: "Event Flyer", username: "@typeflow", category: "POSTERS"),
         Post(imageName: "poster2",  title: "Brutalist Poster", username: "@typeflow", category: "POSTERS"),
         Post(imageName: "poster2", title: "Vintage Collage", username: "@inkbyte", category: "POSTERS"),
-        Post(imageName: "poster2", title: "POSTER DESIGN", username: "@rootahh", category: "POSTERS"),
+        Post(imageName: "poster2",  title: "POSTER DESIGN", username: "@rootahh", category: "POSTERS"),
         Post(imageName: "poster2", title: "POSTER DESIGN", username: "@rootahh", category: "POSTERS"),
         Post(imageName: "font1", title: "WEB FONT", username: "@max_kio", category: "FONTS"),
         Post(imageName: "font2", title: "FONT DESIGN", username: "@seven", category: "FONTS"),

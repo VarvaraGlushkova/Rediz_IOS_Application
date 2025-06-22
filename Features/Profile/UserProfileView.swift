@@ -97,7 +97,7 @@ struct UserProfileView: View {
                     .padding(.horizontal)
 
                     // Feed (placeholder)
-                    VStack(spacing: 30) {
+
                         PostCardView(post: Post(
                             imageName: "poster1",
                             title: "POSTER DESIGN",
@@ -130,7 +130,7 @@ struct UserProfileView: View {
             .background(.ultraThinMaterial)
         }
     }
-}
+
 
 #Preview {
     UserProfileView()
