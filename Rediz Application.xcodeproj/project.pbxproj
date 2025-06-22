@@ -45,6 +45,16 @@
 			path = "Rediz ApplicationUITests";
 			sourceTree = "<group>";
 		};
+		C7DC68082E08197A00F15BF6 /* Core */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C7DC680C2E0819B800F15BF6 /* Features */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Features;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,8 @@
 		C7DC67D22E0818F800F15BF6 = {
 			isa = PBXGroup;
 			children = (
+				C7DC680C2E0819B800F15BF6 /* Features */,
+				C7DC68082E08197A00F15BF6 /* Core */,
 				C7DC67DD2E0818F800F15BF6 /* Rediz Application */,
 				C7DC67EE2E0818FA00F15BF6 /* Rediz ApplicationTests */,
 				C7DC67F82E0818FA00F15BF6 /* Rediz ApplicationUITests */,
@@ -109,6 +121,8 @@
 			);
 			fileSystemSynchronizedGroups = (
 				C7DC67DD2E0818F800F15BF6 /* Rediz Application */,
+				C7DC68082E08197A00F15BF6 /* Core */,
+				C7DC680C2E0819B800F15BF6 /* Features */,
 			);
 			name = "Rediz Application";
 			packageProductDependencies = (

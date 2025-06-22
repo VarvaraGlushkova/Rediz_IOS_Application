@@ -1,3 +1,11 @@
+//
+//  UserProfileView.swift
+//  Rediz Application
+//
+//  Created by Варвара Глушкова on 22.06.2025.
+//
+
+
 import SwiftUI
 
 struct UserProfileView: View {
@@ -111,16 +119,19 @@ struct UserProfileView: View {
             Divider()
 
             // Tab bar
-            HStack {
-                TabBarItem(icon: "house", title: "ГЛАВНАЯ")
-                TabBarItem(icon: "square.grid.2x2", title: "ЛЕНТА")
-                TabBarItem(icon: "number", title: "ТЕМЫ")
-                TabBarItem(icon: "doc.text", title: "БЛОГ")
-                TabBarItem(icon: "person", title: "ПРОФИЛЬ", isSelected: true)
-            }
+//            HStack {
+//                TabBarItem(icon: "house", title: "ГЛАВНАЯ")
+//                TabBarItem(icon: "square.grid.2x2", title: "ЛЕНТА")
+//                TabBarItem(icon: "number", title: "ТЕМЫ")
+//                TabBarItem(icon: "doc.text", title: "БЛОГ")
+//                TabBarItem(icon: "person", title: "ПРОФИЛЬ", isSelected: true)
+//            }
             .padding(.vertical, 10)
             .background(.ultraThinMaterial)
         }
-        .edgesIgnoringSafeArea(.bottom)
     }
+}
+
+#Preview {
+    UserProfileView()
 }

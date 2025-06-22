@@ -11,7 +11,7 @@ import SwiftUI
 struct Rediz_ApplicationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
     }
 }
