@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct TaskCardView: View {
-    let task: Task
+    let task: DesignTask
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -17,7 +17,7 @@ struct TaskCardView: View {
                 Image(task.imageName1)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(height: 160)
+                    .frame(height: 200)
                     .frame(maxWidth: 178)
                     .clipped()
                     .cornerRadius(8)
@@ -25,7 +25,7 @@ struct TaskCardView: View {
                 Image(task.imageName2)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(height: 160)
+                    .frame(height: 200)
                     .frame(maxWidth: 178)
                     .clipped()
                     .cornerRadius(8)
@@ -48,15 +48,16 @@ struct TaskCardView: View {
     }
 }
 
-struct TaskCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        TaskCardView(task: Task(
-            imageName1: "poster1",
-            imageName2: "poster2",
-            title: "Task Redesign",
-            username: "@rootahh",
-            category: "UI"
-        ))
-    }
-}
+//struct TaskCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TaskCardView(task: Task(
+//            imageName1: "poster1",
+//            imageName2: "poster2",
+//            title: "Task Redesign",
+//            description: "8888",
+//            username: "@rootahh",
+//            category: "UI"
+//        ))
+//    }
+//}
 

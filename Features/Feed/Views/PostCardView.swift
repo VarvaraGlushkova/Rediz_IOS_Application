@@ -14,7 +14,9 @@ struct PostCardView: View {
         VStack(alignment: .leading, spacing: 8) {
             Image(post.imageName)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 200)
+                .frame(width: 370)
                 .cornerRadius(8)
 
             HStack {
@@ -33,3 +35,4 @@ struct PostCardView: View {
         .padding(.horizontal)
     }
 }
+

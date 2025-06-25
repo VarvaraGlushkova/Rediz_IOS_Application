@@ -27,8 +27,8 @@ class PosterFeedViewModel: ObservableObject {
     private let allPosts: [Post] = [
         Post(imageName: "poster1", title: "POSTER DESIGN", username: "@rootahh", category: "POSTERS"),
         Post(imageName: "poster2", title: "POSTER DESIGN", username: "@rootahh", category: "POSTERS"),
-        Post(imageName: "poster2", title: "POSTER DESIGN", username: "@rootahh", category: "POSTERS"),
-        Post(imageName: "poster2", title: "Event Flyer", username: "@typeflow", category: "POSTERS"),
+        Post(imageName: "poster3", title: "POSTER DESIGN", username: "@rootahh", category: "POSTERS"),
+        Post(imageName: "poster4", title: "Event Flyer", username: "@typeflow", category: "POSTERS"),
         Post(imageName: "poster2",  title: "Brutalist Poster", username: "@typeflow", category: "POSTERS"),
         Post(imageName: "poster2", title: "Vintage Collage", username: "@inkbyte", category: "POSTERS"),
         Post(imageName: "poster2",  title: "POSTER DESIGN", username: "@rootahh", category: "POSTERS"),

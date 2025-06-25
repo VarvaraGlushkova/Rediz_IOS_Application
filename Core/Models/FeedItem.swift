@@ -10,7 +10,7 @@ import Foundation
 
 enum FeedItem: Identifiable {
     case post(Post)
-    case task(Task)
+    case task(DesignTask)
 
     var id: UUID {
         switch self {

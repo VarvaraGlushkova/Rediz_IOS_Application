@@ -11,6 +11,7 @@ struct MainTabView: View {
     var body: some View {
         TabView {
             MixedFeedView()
+                .onAppear { print("Main loaded") }
                 .tabItem {
                     Image(systemName: "house")
                     Text("ГЛАВНАЯ")
@@ -28,19 +29,22 @@ struct MainTabView: View {
                     Text("ТЕМЫ")
                 }
 
+
             BlogView()
                 .tabItem {
                     Image(systemName: "doc.text")
                     Text("БЛОГ")
                 }
 
-            UserProfileView()
+            NavigationStack {
+                UserProfileView()
+            }
                 .tabItem {
                     Image(systemName: "person")
                     Text("ПРОФИЛЬ")
                 }
         }
-        .accentColor(.pink) // active tab color (optional)
+        .accentColor(.pink) // active tab color
     }
 }
 
